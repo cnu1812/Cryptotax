@@ -9,8 +9,9 @@ function Home(){
             <main className="container mx-auto font-paragraph text-neutral-800">
                 <section className="mt-11 flex justify-center">
                     <iframe
-                        src="https://www.youtube.com/embed/9lW9unsbSGw"
+                        src="https://www.youtube.com/embed/9lW9unsbSGw?autoplay=1"
                         title="Tailwind Sizing Utility Classes Explanations"
+                        allow="autoplay"
                         frameborder="0"
                         className="w-full max-w-2xl aspect-video rounded-md">
                     </iframe>
