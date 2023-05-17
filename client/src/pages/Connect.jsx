@@ -14,7 +14,7 @@ function Connect(){
                         <Breadcrumb />
                         <h1 className="text-4xl font-bold">Visualize and export your <br />crypto tax reports quickly</h1>
                         <form className="w-1/2 flex flex-col gap-3">
-                            <label for="location-select" className="after:content-['*'] after:text-red-500">Location </label>
+                            <label htmlFor="location-select" className="after:content-['*'] after:text-red-500">Location </label>
                             <div>
                                 <select id="location-select" className="w-full px-2 py-3 bg-neutral-200 rounded-md after:">
                                     <option value="">Select your country</option>
