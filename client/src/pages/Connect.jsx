@@ -1,16 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { formatEther } from "ethers"
+import React from 'react'
 import Navbar from '../components/Navbar'
 import Breadcrumb from '../components/Breadcrumb'
-import ConnectWalletButton from '../components/ConnectWalletButton'
-
-/*TODO:
-1. Manage states between the wallet button and select input
-2. Send the wallet addres and location to the backend
-3. Send data between react-routes, that is, send the location to the dashboard.
-4. Add prettier to the project
-5. Costumize wallet modal
-*/
+import { Web3Button } from '@web3modal/react'
 
 function Connect(){
 
@@ -31,7 +22,7 @@ function Connect(){
                                     <option value="brazil">Brazil</option>
                                 </select>
                             </div>
-                            <ConnectWalletButton />
+                            <Web3Button />
                         </form>
                     </section>
                     <section className="bg-neutral-200 grid place-items-center">
