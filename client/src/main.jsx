@@ -8,7 +8,7 @@ import { arbitrum, mainnet, polygon } from 'wagmi/chains'
 import './index.css'
 import Home from './pages/Home.jsx'
 import Error from './pages/Error.jsx'
-import Connect from './pages/Connect.jsx'
+import Connect, { action as connectAction } from './pages/Connect.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 
 const chains = [arbitrum, mainnet, polygon]
@@ -30,7 +30,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/connect',
-    element: <Connect />
+    element: <Connect />,
+    action: connectAction
   },
   {
     path: '/dashboard',
@@ -43,6 +44,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <WagmiConfig config={wagmiConfig}>
       <RouterProvider router={router} />
     </WagmiConfig>
-    <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    <Web3Modal
+      projectId={projectId}
+      ethereumClient={ethereumClient}
+      themeVariables={{
+        '--w3m-button-border-radius': '6px'
+      }} />
   </React.StrictMode>,
 )
